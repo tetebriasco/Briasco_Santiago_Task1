@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,36 +6,48 @@
     font-family: 'Calibri'
 }
 
-header{
+header {
     background-image: url(../img/design1_image1.jpg);
     overflow: hidden;
     min-height: 50vh;
     background-size: cover;
     position: relative;
-    z-index: 1;
 }
 
-header h1{
-    padding: 10px;
-    font-size: 60px;
-}
-
-header h2 {
-    background-color: black;
-    color: white;
-    padding: 10px;
-    text-align: center;
+header::after {
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
+    height: 50px;
+    background-color: white;
+    z-index:1;
+}
+
+header h1 {
+    padding: 10px;
+    font-size: 60px;
+}
+
+.event-container {
+    position: absolute;
+    bottom: 7%;
+    left: 0;
+    right: 0;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:2;
 }
 
 .logo {
     position: absolute;
-    top: 350px;
+    top: -50px;
     right: 200px;
-    z-index: 2;
     width: 120px;
     border: 2px solid white;
     background-color: black;
@@ -46,20 +58,23 @@ header h2 {
 }
 
 main {
-    margin-top: 40px;
+    position: relative;
+    margin-top: 0;
 }
+
 
 .container {
     display: flex;
 }
 
 .text {
+    display: flex;
     text-align: justify;
     margin-left: 0px;
-    padding: 1rem;
+    padding: 0.5rem  1rem;
 }
 
-.text p{
+.text p {
     text-indent: 15px;
     margin-bottom: 15px;
 }
@@ -72,8 +87,7 @@ nav {
 
 nav a {
     display: block;
-    margin-bottom: 10px;
-    padding: 1rem;
+    padding: 0.5rem  1rem;
 }
 
 a:active {
@@ -81,26 +95,27 @@ a:active {
     text-decoration: none;
 }
 
-.encabezado{
+.encabezado {
     text-align: center;
 }
 
-.sportsmanship>ul{
+.sportsmanship>ul {
     list-style-position: inside;
     list-style-type: none;
     text-align: left;
     text-indent: 2rem;
 }
 
-.regulations{
+.regulations {
     list-style-position: inside;
 }
 
-.lista_vocales{
+.lista_vocales {
     list-style-type: lower-latin;
 }
 
-td, th {
+td,
+th {
     /* border: 1px solid red; */
     padding: 0.25rem 2rem 0.25rem 0.10rem;
 }
@@ -109,10 +124,51 @@ th {
     text-align: left;
 }
 
-.columna1{
+.columna1 {
     text-align: center;
 }
 
-.columna2{
+.columna2 {
     padding: 0.25rem 4rem 0.25rem 0.10rem;
+}
+
+
+fieldset {
+    border: none;
+    margin-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    width: 30%;
+}
+
+label,
+input {
+    margin-bottom: 1rem;
+}
+
+h3 {
+    margin-bottom: 0.75rem;
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.contenedor>section{
+    width:270px;
+    height: 230px;
+    background-color: rgb(255, 192, 75);
+    border-radius: 1rem;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.443);
+    text-align: center;
 }
